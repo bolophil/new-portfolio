@@ -1,4 +1,4 @@
-export type Project = {
+export interface Project {
   id: string;
   title: string;
   role: string;
@@ -6,36 +6,49 @@ export type Project = {
   tech: string[];
   tags: string[];
   responsibilities: string[];
-};
+}
 
 export const projects: Project[] = [
   {
-    id: 'intranet-ux-refresh',
-    title: 'Internal Communications Intranet UX Refresh',
-    role: 'Lead UI/UX & Front-End Developer',
+    id: 'design-system-nguyen',
+    title: 'Nguyen Design System',
+    role: 'UI/UX Engineer & Front-End Developer',
     summary:
-      'Redesigned and rebuilt an internal portal to improve content discoverability and reduce time-to-task for 3,000+ employees.',
-    tech: ['React', 'TypeScript', 'CSS', 'Figma'],
-    tags: ['UI/UX', 'Wireframing', 'Accessibility', 'Analytics'],
+      'A personal design system showcasing accessible components, design tokens, and reusable UI patterns.',
+    tech: ['React', 'TypeScript', 'CSS Modules', 'Figma'],
+    tags: ['UI/UX', 'Design System', 'Accessibility'],
     responsibilities: [
-      'Gathered requirements from Communications team and stakeholders.',
-      'Created annotated wireframes and interactive prototypes in Figma.',
-      'Implemented responsive React components with accessible navigation.',
-      'Instrumented page views and click events to evaluate content performance.'
+      'Designed and documented buttons, forms, cards, navigation, and interactive components.',
+      'Implemented 508-compliant patterns including keyboard navigation, focus states, and ARIA support.',
+      'Created design tokens for typography, spacing, color, and elevation to ensure consistency.'
     ]
   },
   {
-    id: 'public-site-redesign',
-    title: 'Public Website Redesign',
+    id: 'portfolio-cms',
+    title: 'Personal Portfolio Content Manager',
+    role: 'Full-Stack Developer (Front-End Focus)',
+    summary:
+      'A self-contained CMS for managing portfolio projects, metadata, screenshots, and case studies.',
+    tech: ['React', 'TypeScript', 'Node.js (mock)', 'CSS'],
+    tags: ['UI/UX', 'Internal Tools', 'Content Management'],
+    responsibilities: [
+      'Designed and developed an internal CMS for managing personal project entries and case studies.',
+      'Built CRUD interfaces with form validation and a clean editorial workflow.',
+      'Integrated live preview and project categorization to streamline portfolio updates.'
+    ]
+  },
+  {
+    id: 'skills-dashboard',
+    title: 'Personal Skills Analytics Dashboard',
     role: 'Front-End Developer',
     summary:
-      'Implemented a modular design system and updated public-facing pages for a security-focused organization.',
-    tech: ['HTML5', 'CSS', 'JavaScript', 'Bootstrap'],
-    tags: ['Branding', 'Design System', 'Responsive'],
+      'A dashboard visualizing personal skill growth, tech usage frequency, and project distribution.',
+    tech: ['React', 'TypeScript', 'Chart.js', 'Figma'],
+    tags: ['Analytics', 'Data Visualization', 'UI/UX'],
     responsibilities: [
-      'Translated brand style tiles into reusable CSS utility classes.',
-      'Implemented high-contrast, 508-compliant templates across multiple page types.',
-      'Collaborated with back-end team to integrate templates with CMS.'
+      'Designed visualizations to track personal skill development, learning time, and technology usage.',
+      'Implemented interactive charts including radar, bar, and timeline views.',
+      'Created custom filters and breakdowns to analyze skill trends over time.'
     ]
   }
 ];
